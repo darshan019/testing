@@ -5,7 +5,7 @@ function caesarCipher(string, shiftFactor) {
   const strArr = string.split('')
   
   for(let i = 0; i < strArr.length; i++) {
-    if(strArr[i] !== ' ' && strArr[i] !== '!' && strArr[i] !== '.' && strArr[i] !== ',') {
+    if(strArr[i] !== ' ' && strArr[i] !== '!' && strArr[i] !== '.' && strArr[i] !== ',' && strArr[i] !== ';' && strArr[i] !== ':' && strArr[i] !== '"' && strArr[i] !== "'") {
       if(strArr[i] === strArr[i].toUpperCase()) {
         strArr[i] = alphabetArray[(alphabetArray.indexOf(strArr[i].toLowerCase()) + shiftFactor) % alphabetArray.length].toUpperCase()
       }
